@@ -1,13 +1,15 @@
+'use client';
+
 import { HamburgerIcon } from '@/icons';
 import LanguageGroup from './LanguageGroup';
 import NavBarIcons from './NavBarIcons';
 import NavbarProfile from './NavbarProfile';
 import SearchBar from './SearchBar';
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }: any) => {
   return (
     <div className=" h-[7.5rem] bg-[#15132B] flex justify-around items-center">
-      <span className=" 2xl:hidden pl-2">
+      <span onClick={toggleSidebar} className=" 2xl:hidden pl-2 cursor-pointer">
         <HamburgerIcon />
       </span>
       <div className="pl-4 lg:p-0 w-[15rem] sm:w-[18rem] lg:w-[30.6875rem] h-[4.25rem]">
@@ -22,6 +24,7 @@ const Navbar = () => {
       <div className="hidden lg:inline-block w-fit">
         <LanguageGroup />
       </div>
+      <div className="w-px h-14 bg-slate-800 rounded-lg hidden sm:inline-block" />
       <div className="w-fit">
         <NavbarProfile />
       </div>

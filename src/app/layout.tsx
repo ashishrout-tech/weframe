@@ -1,8 +1,8 @@
 import './globals.css';
-import type { Metadata } from 'next';
 import { Cairo, Open_Sans } from 'next/font/google';
-import { Navbar, SideBar } from '@/components';
 import localFont from 'next/font/local';
+import ClientProvider from './ClientProvider';
+import { Metadata } from 'next';
 
 const cairo = Cairo({
   subsets: ['latin'],
@@ -35,13 +35,7 @@ export default function RootLayout({
       <body
         className={`${cairo.variable} ${openSans.variable} ${myFont.variable} bg-[#0D0B21] flex`}
       >
-        <div className="w-fit hidden 2xl:inline-block">
-          <SideBar />
-        </div>
-        <div className="w-full">
-          <Navbar />
-          {children}
-        </div>
+        <ClientProvider>{children}</ClientProvider>
       </body>
     </html>
   );
