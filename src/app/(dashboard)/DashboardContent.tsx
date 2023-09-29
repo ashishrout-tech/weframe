@@ -5,7 +5,7 @@ import TodoList from './TodoList';
 
 const DashboardContent = () => {
   return (
-    <div className=" flex gap-[1.87rem] flex-wrap font-cairo">
+    <div className=" flex-col md:flex-row w-fit flex gap-[1.87rem] md:flex-wrap md:justify-around font-cairo">
       <TodoList />
       <InProgress />
       <Done />

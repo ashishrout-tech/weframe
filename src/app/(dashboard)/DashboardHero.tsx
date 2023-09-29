@@ -9,8 +9,8 @@ import {
 
 const DashboardHero = () => {
   return (
-    <div className=" bg-[#15132B] p-8 flex justify-between">
-      <div className=" flex gap-x-[1.12rem]">
+    <div className=" bg-[#15132B] p-8 flex flex-col lg:flex-row lg:justify-between gap-y-14 lg:gap-0">
+      <div className=" flex gap-x-[1.12rem] justify-center lg:justify-start">
         <div className=" h-fit">
           <BackButtonIcon />
         </div>
@@ -21,7 +21,7 @@ const DashboardHero = () => {
           <p className=" font-cairo text-sm font-normal text-[#A5A5A5]">
             Created by Instructor Day on November 31, 2022
           </p>
-          <div className=" h-[2.5rem] flex gap-x-5">
+          <div className=" flex gap-x-5 flex-wrap items-center gap-y-5">
             <CircleComponent total={9} commonClasses={`border-[#15132B]`} />
             <Button className=" bg-[#6418C3]">
               <AddFriendIcon />
@@ -37,13 +37,13 @@ const DashboardHero = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-y-[3.25rem]">
-        <div className=" flex justify-end items-center gap-x-6">
+      <div className=" flex flex-col gap-y-[3.25rem] items-center lg:justify-start">
+        <div className=" flex lg:justify-end items-center gap-x-6 p-0 sm:pl-[1.7rem] lg:p-0">
           <div className=" flex flex-col gap-y-1 ">
             <p className="text-lg font-bold font-cairo">
               Centered Martial Arts
             </p>
-            <p className="text-neutral-400 text-sm font-normal font-openSans flex justify-end">
+            <p className="text-neutral-400 text-sm font-normal font-openSans flex lg:justify-end">
               Sunnyvale, Ca
             </p>
           </div>
@@ -52,7 +52,7 @@ const DashboardHero = () => {
           </div>
           <VertIcon />
         </div>
-        <div className=" flex justify-end gap-x-7 items-center">
+        <div className=" flex lg:justify-end gap-x-7 lg:items-center flex-col lg:flex-row flex-wrap gap-y-5">
           <p className=" font-semibold font-openSans">Total Progress 60%</p>
           <ProgressBar
             className={`bg-[#6418C3]`}

@@ -36,7 +36,7 @@ const iconArr: TIconArr[] = [
 
 const NavBarIcons = () => {
   return (
-    <div className="w-fit flex gap-x-[2.5rem]">
+    <div className="w-fit flex gap-x-4 lg:gap-x-[2.5rem]">
       {iconArr.map((ele) => (
         <SingleIcon
           key={ele.id}

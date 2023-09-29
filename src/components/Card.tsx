@@ -17,7 +17,7 @@ const Card = ({
   dueDays: number;
 }) => {
   return (
-    <div className=" w-full bg-[#211A75] px-8 p-6 flex flex-col gap-y-2 rounded-2xl">
+    <div className=" w-full bg-[#211A75] px-8 p-6 flex flex-col gap-y-2 rounded-2xl hover:skew-y-1 hover:translate-x-8 hover:translate-y-4 hover:rotate-6 transition-all shadow-xl shadow-black hover:z-10">
       <div id="status" className=" flex justify-between items-center">
         <div className=" flex gap-x-[0.69rem] items-center">
           <div className={`${colourClasses} w-2.5 h-2.5 rounded-full`} />
